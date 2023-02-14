@@ -1,0 +1,193 @@
+2022-11-03 10:47:20.413 [main] INFO  com.example.fsagent.FsAgentApplication - Starting FsAgentApplication v0.0.1-SNAPSHOT using Java 1.8.0_351 on 陈杰 with PID 21288 (D:\xiangmu\xiangmuJar\fsagent\1\fsagent-0.0.1-SNAPSHOT.jar started by 13096 in D:\xiangmu\xiangmuJar\fsagent\1)
+2022-11-03 10:47:20.418 [main] INFO  com.example.fsagent.FsAgentApplication - No active profile set, falling back to 1 default profile: "default"
+2022-11-03 10:47:21.639 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 18001 (http)
+2022-11-03 10:47:21.648 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:47:21.649 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-11-03 10:47:21.650 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-03 10:47:21.770 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-11-03 10:47:21.770 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1305 ms
+2022-11-03 10:47:21.926 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要加载的系统配置:com.example.fsagent.entity.json.PathPropertiesJson@d0a57
+2022-11-03 10:47:21.930 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要注册的目录:{/home/A={47.101.154.252=[{/home/A=false}, {/home/H=false}]}, /home/C={47.101.154.252=[{/home/C=false}]}, /home/D={47.101.154.252=[{/home/H=false}]}}
+2022-11-03 10:47:22.010 [main] INFO  com.example.fsagent.service.JsonService - 初始化时pathMap:{47.101.154.252_/home/A_/home/A=com.example.fsagent.configuration.sftp.PathMappingProperties@1d90b9e, 47.101.154.252_/home/C_/home/C=com.example.fsagent.configuration.sftp.PathMappingProperties@184ab05, 47.101.154.252_/home/A_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@efe5e5, 47.101.154.252_/home/D_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@9e0f5d}
+2022-11-03 10:47:22.015 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session created.
+2022-11-03 10:47:22.964 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session connected.
+2022-11-03 10:47:23.281 [main] INFO  com.example.fsagent.utils.SFTPUtils - Opening Channel.
+2022-11-03 10:47:23.282 [main] INFO  com.example.fsagent.utils.SFTPUtils - Connected to 47.101.154.252.
+2022-11-03 10:47:23.300 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/A
+2022-11-03 10:47:23.302 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/C
+2022-11-03 10:47:23.302 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/A
+2022-11-03 10:47:23.303 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/D
+2022-11-03 10:47:23.304 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：18线程名字：taskExecutor-1watchservice_监控文件目录: /home/A
+2022-11-03 10:47:23.304 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/C
+2022-11-03 10:47:23.306 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/D
+2022-11-03 10:47:23.307 [taskExecutor-4] INFO  com.example.fsagent.socket.ServerSocketConfig - socket服务端开启
+2022-11-03 10:47:23.308 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：19线程名字：taskExecutor-2watchservice_监控文件目录: /home/C
+2022-11-03 10:47:23.309 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：20线程名字：taskExecutor-3watchservice_监控文件目录: /home/D
+2022-11-03 10:47:23.309 [taskExecutor-1] ERROR com.example.fsagent.watch.WatchService - watchservice_文件监控系统异常信息
+java.nio.file.NoSuchFileException: \home\A
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.asIOException(Unknown Source)
+	at sun.nio.fs.WindowsWatchService$Poller.implRegister(Unknown Source)
+	at sun.nio.fs.AbstractPoller.processRequests(Unknown Source)
+	at sun.nio.fs.WindowsWatchService$Poller.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2022-11-03 10:47:23.311 [taskExecutor-2] ERROR com.example.fsagent.watch.WatchService - watchservice_文件监控系统异常信息
+java.nio.file.NoSuchFileException: \home\C
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.asIOException(Unknown Source)
+	at sun.nio.fs.WindowsWatchService$Poller.implRegister(Unknown Source)
+	at sun.nio.fs.AbstractPoller.processRequests(Unknown Source)
+	at sun.nio.fs.WindowsWatchService$Poller.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2022-11-03 10:47:23.311 [taskExecutor-3] ERROR com.example.fsagent.watch.WatchService - watchservice_文件监控系统异常信息
+java.nio.file.NoSuchFileException: \home\D
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.asIOException(Unknown Source)
+	at sun.nio.fs.WindowsWatchService$Poller.implRegister(Unknown Source)
+	at sun.nio.fs.AbstractPoller.processRequests(Unknown Source)
+	at sun.nio.fs.WindowsWatchService$Poller.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2022-11-03 10:47:23.681 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:47:23.715 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 18001 (http) with context path ''
+2022-11-03 10:47:23.724 [main] INFO  com.example.fsagent.FsAgentApplication - Started FsAgentApplication in 3.735 seconds (JVM running for 4.22)
+2022-11-03 10:47:23.728 [main] INFO  com.example.fsagent.FsAgentApplication - AgentApplication is running ...
+2022-11-03 10:50:47.702 [main] INFO  com.example.fsagent.FsAgentApplication - Starting FsAgentApplication v0.0.1-SNAPSHOT using Java 1.8.0_351 on 陈杰 with PID 17844 (D:\xiangmu\xiangmuJar\fsagent\1\fsagent-0.0.1-SNAPSHOT.jar started by 13096 in D:\xiangmu\xiangmuJar\fsagent\1)
+2022-11-03 10:50:47.702 [main] INFO  com.example.fsagent.FsAgentApplication - No active profile set, falling back to 1 default profile: "default"
+2022-11-03 10:50:48.867 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 18001 (http)
+2022-11-03 10:50:48.879 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:50:48.880 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-11-03 10:50:48.880 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-03 10:50:48.996 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-11-03 10:50:48.996 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1244 ms
+2022-11-03 10:50:49.153 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要加载的系统配置:com.example.fsagent.entity.json.PathPropertiesJson@d0a57
+2022-11-03 10:50:49.156 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要注册的目录:{/home/A={47.101.154.252=[{/home/A=false}, {/home/H=false}]}, /home/C={47.101.154.252=[{/home/C=false}]}, /home/D={47.101.154.252=[{/home/H=false}]}}
+2022-11-03 10:50:49.161 [main] INFO  com.example.fsagent.service.JsonService - 初始化时pathMap:{47.101.154.252_/home/A_/home/A=com.example.fsagent.configuration.sftp.PathMappingProperties@1d90b9e, 47.101.154.252_/home/C_/home/C=com.example.fsagent.configuration.sftp.PathMappingProperties@184ab05, 47.101.154.252_/home/A_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@efe5e5, 47.101.154.252_/home/D_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@9e0f5d}
+2022-11-03 10:50:49.166 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session created.
+2022-11-03 10:50:50.094 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session connected.
+2022-11-03 10:50:50.344 [main] INFO  com.example.fsagent.utils.SFTPUtils - Opening Channel.
+2022-11-03 10:50:50.350 [main] INFO  com.example.fsagent.utils.SFTPUtils - Connected to 47.101.154.252.
+2022-11-03 10:50:50.353 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/A
+2022-11-03 10:50:50.355 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/C
+2022-11-03 10:50:50.356 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/A
+2022-11-03 10:50:50.357 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/D
+2022-11-03 10:50:50.357 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：18线程名字：taskExecutor-1watchservice_监控文件目录: /home/A
+2022-11-03 10:50:50.357 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/C
+2022-11-03 10:50:50.359 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/D
+2022-11-03 10:50:50.360 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：19线程名字：taskExecutor-2watchservice_监控文件目录: /home/C
+2022-11-03 10:50:50.360 [taskExecutor-4] INFO  com.example.fsagent.socket.ServerSocketConfig - socket服务端开启
+2022-11-03 10:50:50.362 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：20线程名字：taskExecutor-3watchservice_监控文件目录: /home/D
+2022-11-03 10:50:50.372 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/A
+2022-11-03 10:50:50.373 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/D
+2022-11-03 10:50:50.373 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/C
+2022-11-03 10:50:50.665 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:50:50.693 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 18001 (http) with context path ''
+2022-11-03 10:50:50.697 [main] INFO  com.example.fsagent.FsAgentApplication - Started FsAgentApplication in 3.422 seconds (JVM running for 3.738)
+2022-11-03 10:50:50.703 [main] INFO  com.example.fsagent.FsAgentApplication - AgentApplication is running ...
+2022-11-03 10:53:12.078 [main] INFO  com.example.fsagent.FsAgentApplication - Starting FsAgentApplication v0.0.1-SNAPSHOT using Java 1.8.0_351 on 陈杰 with PID 10504 (D:\xiangmu\xiangmuJar\fsagent\1\fsagent-0.0.1-SNAPSHOT.jar started by 13096 in D:\xiangmu\xiangmuJar\fsagent\1)
+2022-11-03 10:53:12.078 [main] INFO  com.example.fsagent.FsAgentApplication - No active profile set, falling back to 1 default profile: "default"
+2022-11-03 10:53:13.232 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 18001 (http)
+2022-11-03 10:53:13.242 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:53:13.242 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-11-03 10:53:13.247 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-03 10:53:13.358 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-11-03 10:53:13.358 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1232 ms
+2022-11-03 10:53:13.513 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要加载的系统配置:com.example.fsagent.entity.json.PathPropertiesJson@d0a57
+2022-11-03 10:53:13.515 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要注册的目录:{/home/A={47.101.154.252=[{/home/A=false}, {/home/H=false}]}, /home/C={47.101.154.252=[{/home/C=false}]}, /home/D={47.101.154.252=[{/home/H=false}]}}
+2022-11-03 10:53:13.519 [main] INFO  com.example.fsagent.service.JsonService - 初始化时pathMap:{47.101.154.252_/home/A_/home/A=com.example.fsagent.configuration.sftp.PathMappingProperties@1d90b9e, 47.101.154.252_/home/C_/home/C=com.example.fsagent.configuration.sftp.PathMappingProperties@184ab05, 47.101.154.252_/home/A_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@efe5e5, 47.101.154.252_/home/D_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@9e0f5d}
+2022-11-03 10:53:13.527 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session created.
+2022-11-03 10:53:14.440 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session connected.
+2022-11-03 10:53:14.688 [main] INFO  com.example.fsagent.utils.SFTPUtils - Opening Channel.
+2022-11-03 10:53:14.689 [main] INFO  com.example.fsagent.utils.SFTPUtils - Connected to 47.101.154.252.
+2022-11-03 10:53:14.692 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/A
+2022-11-03 10:53:14.694 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/C
+2022-11-03 10:53:14.695 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/D
+2022-11-03 10:53:14.695 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/A
+2022-11-03 10:53:14.695 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/C
+2022-11-03 10:53:14.696 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/D
+2022-11-03 10:53:14.696 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：18线程名字：taskExecutor-1watchservice_监控文件目录: /home/A
+2022-11-03 10:53:14.697 [taskExecutor-4] INFO  com.example.fsagent.socket.ServerSocketConfig - socket服务端开启
+2022-11-03 10:53:14.697 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：19线程名字：taskExecutor-2watchservice_监控文件目录: /home/C
+2022-11-03 10:53:14.698 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：20线程名字：taskExecutor-3watchservice_监控文件目录: /home/D
+2022-11-03 10:53:14.700 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/A
+2022-11-03 10:53:14.701 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/C
+2022-11-03 10:53:14.702 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/D
+2022-11-03 10:53:14.983 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:53:15.009 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 18001 (http) with context path ''
+2022-11-03 10:53:15.013 [main] INFO  com.example.fsagent.FsAgentApplication - Started FsAgentApplication in 3.346 seconds (JVM running for 3.66)
+2022-11-03 10:53:15.019 [main] INFO  com.example.fsagent.FsAgentApplication - AgentApplication is running ...
+2022-11-03 10:53:33.926 [main] INFO  com.example.fsagent.FsAgentApplication - Starting FsAgentApplication v0.0.1-SNAPSHOT using Java 1.8.0_351 on 陈杰 with PID 30008 (D:\xiangmu\xiangmuJar\fsagent\1\fsagent-0.0.1-SNAPSHOT.jar started by 13096 in D:\xiangmu\xiangmuJar\fsagent\1)
+2022-11-03 10:53:33.932 [main] INFO  com.example.fsagent.FsAgentApplication - No active profile set, falling back to 1 default profile: "default"
+2022-11-03 10:53:35.091 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 18001 (http)
+2022-11-03 10:53:35.108 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:53:35.109 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-11-03 10:53:35.110 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-03 10:53:35.247 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-11-03 10:53:35.248 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1271 ms
+2022-11-03 10:53:35.402 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要加载的系统配置:com.example.fsagent.entity.json.PathPropertiesJson@22fc4c
+2022-11-03 10:53:35.405 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要注册的目录:{/home/A={47.101.154.252=[{/home/A=false}, {/home/H=false}]}, /home/C={47.101.154.252=[{/home/C=false}]}, /home/D={47.101.154.252=[{/home/H=false}]}}
+2022-11-03 10:53:35.406 [main] INFO  com.example.fsagent.service.JsonService - 初始化时pathMap:{47.101.154.252_/home/A_/home/A=com.example.fsagent.configuration.sftp.PathMappingProperties@d0a57, 47.101.154.252_/home/C_/home/C=com.example.fsagent.configuration.sftp.PathMappingProperties@1d90b9e, 47.101.154.252_/home/A_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@184ab05, 47.101.154.252_/home/D_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@efe5e5}
+2022-11-03 10:53:35.409 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session created.
+2022-11-03 10:54:02.221 [main] INFO  com.example.fsagent.FsAgentApplication - Starting FsAgentApplication v0.0.1-SNAPSHOT using Java 1.8.0_351 on 陈杰 with PID 18548 (D:\xiangmu\xiangmuJar\fsagent\1\fsagent-0.0.1-SNAPSHOT.jar started by 13096 in D:\xiangmu\xiangmuJar\fsagent\1)
+2022-11-03 10:54:02.225 [main] INFO  com.example.fsagent.FsAgentApplication - No active profile set, falling back to 1 default profile: "default"
+2022-11-03 10:54:03.356 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 18001 (http)
+2022-11-03 10:54:03.368 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:54:03.369 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-11-03 10:54:03.369 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-03 10:54:03.486 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-11-03 10:54:03.486 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1214 ms
+2022-11-03 10:54:03.639 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要加载的系统配置:com.example.fsagent.entity.json.PathPropertiesJson@22fc4c
+2022-11-03 10:54:03.642 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要注册的目录:{/home/A={47.101.154.252=[{/home/A=false}, {/home/H=false}]}, /home/C={47.101.154.252=[{/home/C=false}]}, /home/D={47.101.154.252=[{/home/H=false}]}}
+2022-11-03 10:54:03.646 [main] INFO  com.example.fsagent.service.JsonService - 初始化时pathMap:{47.101.154.252_/home/A_/home/A=com.example.fsagent.configuration.sftp.PathMappingProperties@d0a57, 47.101.154.252_/home/C_/home/C=com.example.fsagent.configuration.sftp.PathMappingProperties@1d90b9e, 47.101.154.252_/home/A_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@184ab05, 47.101.154.252_/home/D_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@efe5e5}
+2022-11-03 10:54:03.651 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session created.
+2022-11-03 10:54:04.605 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session connected.
+2022-11-03 10:54:05.008 [main] INFO  com.example.fsagent.utils.SFTPUtils - Opening Channel.
+2022-11-03 10:54:05.010 [main] INFO  com.example.fsagent.utils.SFTPUtils - Connected to 47.101.154.252.
+2022-11-03 10:54:05.014 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/A
+2022-11-03 10:54:05.016 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/C
+2022-11-03 10:54:05.016 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/A
+2022-11-03 10:54:05.017 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/D
+2022-11-03 10:54:05.017 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/C
+2022-11-03 10:54:05.018 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：18线程名字：taskExecutor-1watchservice_监控文件目录: /home/A
+2022-11-03 10:54:05.020 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/D
+2022-11-03 10:54:05.020 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：19线程名字：taskExecutor-2watchservice_监控文件目录: /home/C
+2022-11-03 10:54:05.022 [taskExecutor-4] INFO  com.example.fsagent.socket.ServerSocketConfig - socket服务端开启
+2022-11-03 10:54:05.023 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：20线程名字：taskExecutor-3watchservice_监控文件目录: /home/D
+2022-11-03 10:54:05.024 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/A
+2022-11-03 10:54:05.024 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/C
+2022-11-03 10:54:05.026 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/D
+2022-11-03 10:54:05.314 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:54:05.331 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 18001 (http) with context path ''
+2022-11-03 10:54:05.335 [main] INFO  com.example.fsagent.FsAgentApplication - Started FsAgentApplication in 3.514 seconds (JVM running for 3.83)
+2022-11-03 10:54:05.342 [main] INFO  com.example.fsagent.FsAgentApplication - AgentApplication is running ...
+2022-11-03 10:56:16.292 [main] INFO  com.example.fsagent.FsAgentApplication - Starting FsAgentApplication v0.0.1-SNAPSHOT using Java 1.8.0_351 on 陈杰 with PID 23544 (D:\xiangmu\xiangmuJar\fsagent\1\fsagent-xjar.jar started by 13096 in D:\xiangmu\xiangmuJar\fsagent\1)
+2022-11-03 10:56:16.300 [main] INFO  com.example.fsagent.FsAgentApplication - No active profile set, falling back to 1 default profile: "default"
+2022-11-03 10:56:18.688 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 18001 (http)
+2022-11-03 10:56:18.713 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:56:18.713 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-11-03 10:56:18.716 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-03 10:56:18.857 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-11-03 10:56:18.857 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2443 ms
+2022-11-03 10:56:19.195 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要加载的系统配置:com.example.fsagent.entity.json.PathPropertiesJson@16d585c
+2022-11-03 10:56:19.195 [main] INFO  com.example.fsagent.service.JsonService - 初始化时需要注册的目录:{/home/A={47.101.154.252=[{/home/A=false}, {/home/H=false}]}, /home/C={47.101.154.252=[{/home/C=false}]}, /home/D={47.101.154.252=[{/home/H=false}]}}
+2022-11-03 10:56:19.202 [main] INFO  com.example.fsagent.service.JsonService - 初始化时pathMap:{47.101.154.252_/home/A_/home/A=com.example.fsagent.configuration.sftp.PathMappingProperties@7a85e1, 47.101.154.252_/home/C_/home/C=com.example.fsagent.configuration.sftp.PathMappingProperties@11a5887, 47.101.154.252_/home/A_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@152768b, 47.101.154.252_/home/D_/home/H=com.example.fsagent.configuration.sftp.PathMappingProperties@947bc5}
+2022-11-03 10:56:19.224 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session created.
+2022-11-03 10:56:20.122 [main] INFO  com.example.fsagent.utils.SFTPUtils - Session connected.
+2022-11-03 10:56:20.411 [main] INFO  com.example.fsagent.utils.SFTPUtils - Opening Channel.
+2022-11-03 10:56:20.413 [main] INFO  com.example.fsagent.utils.SFTPUtils - Connected to 47.101.154.252.
+2022-11-03 10:56:20.416 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/A
+2022-11-03 10:56:20.418 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/C
+2022-11-03 10:56:20.419 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/A
+2022-11-03 10:56:20.419 [main] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录1:/home/D
+2022-11-03 10:56:20.421 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：18线程名字：taskExecutor-1watchservice_监控文件目录: /home/A
+2022-11-03 10:56:20.421 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/C
+2022-11-03 10:56:20.423 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 初始化时_watchService_需要监控目录2:/home/D
+2022-11-03 10:56:20.424 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：19线程名字：taskExecutor-2watchservice_监控文件目录: /home/C
+2022-11-03 10:56:20.425 [taskExecutor-4] INFO  com.example.fsagent.socket.ServerSocketConfig - socket服务端开启
+2022-11-03 10:56:20.425 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_执行线程ID：20线程名字：taskExecutor-3watchservice_监控文件目录: /home/D
+2022-11-03 10:56:20.425 [taskExecutor-1] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/A
+2022-11-03 10:56:20.427 [taskExecutor-2] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/C
+2022-11-03 10:56:20.428 [taskExecutor-3] INFO  com.example.fsagent.watch.WatchService - 文件监控系统_注册目录后监控文件目录: /home/D
+2022-11-03 10:56:20.973 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-18001"]
+2022-11-03 10:56:21.008 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 18001 (http) with context path ''
+2022-11-03 10:56:21.021 [main] INFO  com.example.fsagent.FsAgentApplication - Started FsAgentApplication in 5.821 seconds (JVM running for 6.909)
+2022-11-03 10:56:21.023 [main] INFO  com.example.fsagent.FsAgentApplication - AgentApplication is running ...

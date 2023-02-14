@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="DemoXjar:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DemoXjar_jar</output-path>
+    <root id="root">
+      <element id="archive" name="DemoXjar.jar">
+        <element id="module-output" name="DemoXjar" />
+      </element>
+      <element id="library" level="project" name="Maven: com.github.core-lib:xjar:4.0.2" />
+    </root>
+  </artifact>
+</component>
